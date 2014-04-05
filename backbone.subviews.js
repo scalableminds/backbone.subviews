@@ -58,6 +58,16 @@
 				delete this.subviews;
 			}
 		};
+
+		view.hideSubview = function(subviewName) {
+		  var subview = this.subviews[subviewName];
+		  if( subview ) subview.$el.hide();
+		};
+
+		view.showSubview = function(subviewName) {
+		  var subview = this.subviews[subviewName];
+		  if( subview ) subview.$el.show();
+		};
 	};
 
 	// ****************** Private utility functions ****************** 
